@@ -2,13 +2,12 @@
 # grade_book.py
 # A simple command-line grade book.
 
-# students = {}  # name -> list of marks
-students = {
-    "Ali": [78, 91, 66]
-}
+students = {}  # name -> list of marks
+
 
 def show_menu():
     print("\n=== Grade Book ===")
+    print("1. Show grades")
     print("0. Exit")
 
 
@@ -43,12 +42,14 @@ def main():
         show_menu()
         choice = input("Choose an option: ")
 
-        if choice == "0":
+        if choice == "1":
+            show_grades()
+        elif choice == "0":
             print("Goodbye!")
             break
         else:
             print("Invalid option.")
-show_grades()
+
 
 if __name__ == "__main__":
     main()
